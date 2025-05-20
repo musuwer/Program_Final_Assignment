@@ -18,24 +18,34 @@ import traceback
 import requests
 from PyQt5.QtGui import QPixmap
 
+
+import datetime # 测试卡顿原因
+
 class HomeWindow(Ui_Form, QWidget):
     init_annouce_done_signal = pyqtSignal(list)
 
     def __init__(self, user_role=None):
         super(HomeWindow, self).__init__()
+
+
+
         self.setupUi(self)
         self.user_role = user_role
         self.add_annou_win = None
+
         self.init_ui()
         self.get_annouce_info()
         self.annouce_info_id = []
-        # self.show_douban()
 
         self.init_annouce_done_signal.connect(self.show_annouce)  # 信号槽,显示公告
-        # print('8888')
+
         self.add_annou_pushButton.clicked.connect(self.add_annou)
         self.refresh_pushButton.clicked.connect(self.get_annouce_info)
-        self.show_douban()
+
+        #主要登录费时间的代码部分：
+        # print("系统时间1:" + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))  # 登录进去系统时间
+        # self.show_douban()
+        # print("系统时间2:" + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))  # 登录进去系统时间
 
     def init_ui(self):
         self.annou_info_tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)  # 所有列自动拉伸，充满界面
@@ -171,33 +181,46 @@ class HomeWindow(Ui_Form, QWidget):
         """
         # print('\n33333\n')
 
-        # 先把原来显示的公告信息删除
+        # 清空表格中原有数据，确保只显示最新的推荐书籍
         for i in range(self.book_recommend_tableWidget.rowCount()):
             self.book_recommend_tableWidget.removeRow(0)
 
+        # 创建数据库连接，查询豆瓣推荐书籍数据
         db = DBHelp()
         count, res = db.query_douban()
 
-
+        # 遍历查询结果，将每本书的信息添加到表格中
         for record in res:
+            # 在表格末尾插入新行
             self.book_recommend_tableWidget.insertRow(self.book_recommend_tableWidget.rowCount())
 
+            # 获取书籍封面图片URL并下载
             url = str(record[0])
-            res = requests.get(url)
+            res = requests.get(url)  # 发送HTTP请求获取图片内容
+
+            # 将图片数据转换为QPixmap格式并设置为表格项的图标
             img = QPixmap()
             img.loadFromData(res.content)
             icon = QIcon(img)
 
+            # 设置第一列为书籍封面图片
             item = QTableWidgetItem()
             item.setIcon(icon)
             self.book_recommend_tableWidget.setItem(self.book_recommend_tableWidget.rowCount() - 1, 0, item)
 
+            # 设置第二列为书籍名称
             item = QTableWidgetItem(str(record[1]))
             self.book_recommend_tableWidget.setItem(self.book_recommend_tableWidget.rowCount() - 1, 1, item)
+
+            # 设置第三列为书籍作者
             item = QTableWidgetItem(str(record[2]))
             self.book_recommend_tableWidget.setItem(self.book_recommend_tableWidget.rowCount() - 1, 2, item)
+
+            # 设置第四列为书籍评分
             item = QTableWidgetItem(str(record[6]))
             self.book_recommend_tableWidget.setItem(self.book_recommend_tableWidget.rowCount() - 1, 3, item)
+
+            # 设置第五列为书籍出版信息
             item = QTableWidgetItem(str(record[8]))
             self.book_recommend_tableWidget.setItem(self.book_recommend_tableWidget.rowCount() - 1, 4, item)
 

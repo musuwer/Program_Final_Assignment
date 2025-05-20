@@ -51,12 +51,14 @@ class Ui_Form(object):
         font.setFamily("宋体")
         font.setPointSize(11)
         item.setFont(font)
+
         self.book_recommend_tableWidget.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
         font.setFamily("宋体")
         font.setPointSize(11)
         item.setFont(font)
+
         self.book_recommend_tableWidget.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()

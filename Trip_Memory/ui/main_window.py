@@ -136,7 +136,7 @@ class Ui_MainWindow(object):
         item = self.listWidget.item(4)
         item.setText(_translate("MainWindow", "关于"))
         self.listWidget.setSortingEnabled(__sortingEnabled)
-        self.label.setText(_translate("MainWindow", "南昌大学图书管理系统"))
+        self.label.setText(_translate("MainWindow", "忆途"))
         self.label_2.setText(_translate("MainWindow", "用户:"))
         self.current_username_label.setText(_translate("MainWindow", "张三"))
         self.label_4.setText(_translate("MainWindow", "角色:"))
