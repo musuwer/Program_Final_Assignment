@@ -47,12 +47,22 @@
         </item>
         <item>
          <property name="text">
-          <string>借阅信息</string>
+          <string>成就管理</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>图书管理</string>
+          <string>事件记录</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>心情日历</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>旅游城市</string>
          </property>
         </item>
         <item>
@@ -107,9 +117,8 @@
            <widget class="QLabel" name="label">
             <property name="font">
              <font>
-              <family>12 宋体</family>
+              <family>13 宋体</family>
               <pointsize>14</pointsize>
-              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -121,7 +130,7 @@
              <string notr="true">font: 14pt bold &quot;宋体&quot;;</string>
             </property>
             <property name="text">
-             <string>南昌大学图书管理系统</string>
+             <string>Trip Memory</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -231,7 +240,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>23</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

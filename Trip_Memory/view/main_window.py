@@ -19,8 +19,8 @@ from util.common_util import ROLE_MAP, APP_ICON, SYS_STYLE
 
 # 从view包导入各个窗口类，用于在主窗口中显示不同的功能页面
 from view.home_window import HomeWindow
-from view.book_manage_window import BookManageWindow
-from view.borrow_info_window import BorrowInfoWindow
+from view.logrecord_window import LogRecordWindow
+from view.achievement_window import AchievementWindow
 from view.about_window import AboutWindow
 from view.message_info_window import MessageInfoWindow
 from view.message_info_user_window import MessageInfoUserWindow
@@ -93,15 +93,26 @@ class MainWindow(Ui_MainWindow, QMainWindow):
         self.stackedWidget.removeWidget(self.page)
         self.stackedWidget.removeWidget(self.page_2)
 
+
+        """
+        管理页面的顺序，重点！！！
+        """
+
         # 向堆叠窗口中添加主页窗口，传入用户角色
         self.stackedWidget.addWidget(HomeWindow(user_role=self.role))
 
-
         # 向堆叠窗口中添加借阅信息窗口，传入用户角色和用户名
-        self.stackedWidget.addWidget(BorrowInfoWindow(user_role=self.role, username=self.username))
+        self.stackedWidget.addWidget(AchievementWindow(user_role=self.role, username=self.username))
 
         # 向堆叠窗口中添加图书管理窗口，传入用户角色和用户名
-        self.stackedWidget.addWidget(BookManageWindow(self.role, self.username))
+        self.stackedWidget.addWidget(LogRecordWindow(self.role, self.username))
+
+        # 向堆叠窗口中添加借阅信息窗口，传入用户角色和用户名
+        self.stackedWidget.addWidget(AchievementWindow(user_role=self.role, username=self.username))
+
+        # 向堆叠窗口中添加图书管理窗口，传入用户角色和用户名
+        self.stackedWidget.addWidget(LogRecordWindow(self.role, self.username))
+
 
         # 根据用户角色添加不同的消息信息窗口
         if self.role == '管理员':

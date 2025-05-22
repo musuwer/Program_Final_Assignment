@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>286</width>
-    <height>263</height>
+    <width>323</width>
+    <height>312</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
         <string notr="true">font: 12pt &quot;宋体&quot;;</string>
        </property>
        <property name="text">
-        <string>书    名:</string>
+        <string>名称</string>
        </property>
       </widget>
      </item>
@@ -55,7 +55,7 @@
         <string notr="true">font: 12pt &quot;宋体&quot;;</string>
        </property>
        <property name="text">
-        <string>作    者:</string>
+        <string>类型</string>
        </property>
       </widget>
      </item>
@@ -82,7 +82,7 @@
         <string notr="true">font: 12pt &quot;宋体&quot;;</string>
        </property>
        <property name="text">
-        <string>出 版 社:</string>
+        <string>地点</string>
        </property>
       </widget>
      </item>
@@ -103,7 +103,7 @@
         <string notr="true">font: 12pt &quot;宋体&quot;;</string>
        </property>
        <property name="text">
-        <string>出版日期:</string>
+        <string>时间     </string>
        </property>
       </widget>
      </item>
@@ -124,7 +124,7 @@
         <string notr="true">font: 12pt &quot;宋体&quot;;</string>
        </property>
        <property name="text">
-        <string>库存数量:</string>
+        <string>内容     </string>
        </property>
       </widget>
      </item>

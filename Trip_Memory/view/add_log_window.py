@@ -1,12 +1,12 @@
 """
-文件名：add_book_window.py
+文件名：add_log_window.py
 描述：添加书籍
 """
 
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget
-from ui.add_book_window import Ui_Form
+from ui.add_log_window import Ui_Form
 from util.common_util import msg_box, get_current_time, get_uuid, APP_ICON, SYS_STYLE, set_le_reg, PATTERS
 from util.dbutil import DBHelp
 

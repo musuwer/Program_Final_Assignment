@@ -1,5 +1,5 @@
 """
-文件名：borrow_info_window.py
+文件名：achievement_window.py
 描述：借阅信息窗口
 """
 
@@ -7,7 +7,7 @@ from threading import Thread
 from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtGui import QColor, QIcon
 from PyQt5.QtWidgets import QWidget, QHeaderView, QAbstractItemView, QTableWidgetItem, QMessageBox, QMenu, QAction
-from ui.book_borrow_info_window import Ui_Form
+from ui.achievement_window import Ui_Form
 from util.dbutil import DBHelp
 from util.common_util import BORROW_STATUS_MAP, SYS_STYLE, SEARCH_CONTENT_MAP, msg_box, RETURN, DELAY_TIME, accept_box, \
     DELETE_ICON, PUSH_RETURN, get_current_time, get_uuid
@@ -15,13 +15,13 @@ from view.renew_window import RenewWindow
 import traceback
 
 
-class BorrowInfoWindow(Ui_Form, QWidget):
+class AchievementWindow(Ui_Form, QWidget):
     #自定义信号
     init_data_done_signal = pyqtSignal(list)
     return_book_done_signal = pyqtSignal()
 
     def __init__(self, user_role=None, username=None):
-        super(BorrowInfoWindow, self).__init__()
+        super(AchievementWindow, self).__init__()
         self.setupUi(self)
         self.user_role = user_role
         self.username = username

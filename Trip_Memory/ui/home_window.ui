@@ -28,13 +28,15 @@ border: 1px;</string>
           <font>
            <family>宋体</family>
            <pointsize>14</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
           <string notr="true">font: 14pt &quot;宋体&quot;;</string>
          </property>
          <property name="text">
-          <string>好书推荐</string>
+          <string>目标记录</string>
          </property>
         </widget>
        </item>
@@ -44,6 +46,8 @@ border: 1px;</string>
           <font>
            <family>宋体</family>
            <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -62,7 +66,7 @@ border: 1px;</string>
          </column>
          <column>
           <property name="text">
-           <string>书名</string>
+           <string>名称</string>
           </property>
           <property name="font">
            <font>
@@ -73,7 +77,7 @@ border: 1px;</string>
          </column>
          <column>
           <property name="text">
-           <string>作者</string>
+           <string>计划</string>
           </property>
           <property name="font">
            <font>
@@ -84,7 +88,7 @@ border: 1px;</string>
          </column>
          <column>
           <property name="text">
-           <string>评分</string>
+           <string>进度</string>
           </property>
           <property name="font">
            <font>
@@ -95,7 +99,7 @@ border: 1px;</string>
          </column>
          <column>
           <property name="text">
-           <string>简介</string>
+           <string>成就</string>
           </property>
           <property name="font">
            <font>
@@ -122,6 +126,8 @@ border: 1px;</string>
           <font>
            <family>宋体</family>
            <pointsize>14</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -144,7 +150,6 @@ border: 1px;</string>
           <font>
            <family>宋体</family>
            <pointsize>12</pointsize>
-           <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
           </font>
@@ -200,6 +205,8 @@ border: 1px;</string>
           <font>
            <family>宋体</family>
            <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
@@ -226,6 +233,8 @@ border: 1px;</string>
           <font>
            <family>宋体</family>
            <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">

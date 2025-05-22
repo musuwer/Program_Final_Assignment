@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>827</width>
+    <width>644</width>
     <height>452</height>
    </rect>
   </property>
@@ -31,41 +31,57 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
-        <widget class="QComboBox" name="comboBox">
+        <widget class="QComboBox" name="search_comboBox">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;宋体&quot;;</string>
          </property>
          <item>
           <property name="text">
-           <string>用户</string>
+           <string>名称</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>书名</string>
+           <string>类型</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>出版社</string>
+           <string>地点</string>
           </property>
          </item>
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="borrow_user_search_lineEdit">
+        <widget class="QLineEdit" name="book_search_content_lineEdit">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;宋体&quot;;</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="search_borrow_user_pushButton">
+        <widget class="QPushButton" name="search_book_pushButton">
          <property name="styleSheet">
           <string notr="true">font: 12pt &quot;宋体&quot;;</string>
          </property>
          <property name="text">
           <string>搜索</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="add_book_pushButton">
+         <property name="styleSheet">
+          <string notr="true">font: 12pt &quot;宋体&quot;;</string>
+         </property>
+         <property name="text">
+          <string>添加事件</string>
          </property>
         </widget>
        </item>
@@ -82,48 +98,80 @@
       </layout>
      </item>
      <item>
+      <widget class="Line" name="line">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>2</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(222, 222, 222);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="book_total_label">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;宋体&quot;;</string>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>2</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(222, 222, 222);</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QTableWidget" name="tableWidget">
        <property name="styleSheet">
         <string notr="true">font: 12pt &quot;宋体&quot;;</string>
        </property>
        <column>
         <property name="text">
-         <string>借阅人</string>
+         <string>名称</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>书名</string>
+         <string>类型</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>出版社</string>
+         <string>地点</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>出版日期</string>
+         <string>时间</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>借出数量</string>
+         <string>内容</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>借出日期</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>应还日期</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>借还状态</string>
+         <string>影响</string>
         </property>
        </column>
       </widget>

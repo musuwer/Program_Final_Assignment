@@ -1,5 +1,5 @@
 """
-文件名：book_manage_window.py
+文件名：logrecord_window.py
 描述：图书管理
 """
 
@@ -7,19 +7,19 @@ from threading import Thread
 from PyQt5.QtCore import pyqtSignal, Qt
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget, QHeaderView, QTableWidgetItem, QAbstractItemView, QMenu, QAction, QMessageBox
-from ui.book_manage_window import Ui_Form
+from ui.logrecord_window import Ui_Form
 from util.dbutil import DBHelp
-from view.add_book_window import AddBookWindow
+from view.add_log_window import AddBookWindow
 from util.common_util import msg_box, SEARCH_CONTENT_MAP, DELETE_ICON, EDIT_ICON, BORROW_BOOK
-from view.book_edit_window import BookEditWindow
+from view.log_edit_window import BookEditWindow
 from view.borrow_book_window import BorrowBookWindow
 
 
-class BookManageWindow(Ui_Form, QWidget):
+class LogRecordWindow(Ui_Form, QWidget):
     query_book_info_done_signal = pyqtSignal(list)#自定义信号
 
     def __init__(self, user_role=None, username=None):
-        super(BookManageWindow, self).__init__()
+        super(LogRecordWindow, self).__init__()
         self.setupUi(self)
         self.user_role = user_role
         self.username = username
@@ -121,7 +121,7 @@ class BookManageWindow(Ui_Form, QWidget):
         for i in range(self.tableWidget.rowCount()):
             self.tableWidget.removeRow(0)
         count = book_info_result[0]
-        self.book_total_label.setText('本图书馆共有藏书' + str(count) + '本')
+        self.book_total_label.setText('系统记录事情:' + str(count) + '件')
         books = book_info_result[1]
         for book in books:
             self.tableWidget.insertRow(self.tableWidget.rowCount())

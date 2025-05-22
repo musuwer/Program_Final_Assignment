@@ -84,7 +84,7 @@ class HomeWindow(Ui_Form, QWidget):
 
         count, res = annouce_info_result[0],annouce_info_result[1]
 
-        self.totol_annouce_label.setText('本图书馆共有公告' + str(count) + '条')
+        self.totol_annouce_label.setText('亿途共有公告' + str(count) + '条')
 
         for record in res:
             self.annou_info_tableWidget.insertRow(self.annou_info_tableWidget.rowCount())

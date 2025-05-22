@@ -1,5 +1,5 @@
 """
-文件名：book_edit_window.py
+文件名：log_edit_window.py
 描述：图书编辑
 """
 
@@ -7,7 +7,7 @@ from threading import Thread
 from PyQt5.QtCore import Qt, pyqtSignal
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget
-from ui.add_book_window import Ui_Form
+from ui.add_log_window import Ui_Form
 from util.dbutil import DBHelp
 from util.common_util import msg_box, APP_ICON, SYS_STYLE, set_le_reg, PATTERS
 
