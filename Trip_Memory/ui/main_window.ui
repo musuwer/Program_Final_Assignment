@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>566</height>
+    <width>978</width>
+    <height>631</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,7 +36,7 @@
        <widget class="QListWidget" name="listWidget">
         <property name="maximumSize">
          <size>
-          <width>200</width>
+          <width>300</width>
           <height>16777215</height>
          </size>
         </property>
@@ -44,35 +44,56 @@
          <property name="text">
           <string>主页</string>
          </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
         </item>
         <item>
          <property name="text">
           <string>成就管理</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
          </property>
         </item>
         <item>
          <property name="text">
           <string>事件记录</string>
          </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
         </item>
         <item>
          <property name="text">
           <string>心情日历</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
          </property>
         </item>
         <item>
          <property name="text">
           <string>旅游城市</string>
          </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
         </item>
         <item>
          <property name="text">
           <string>反馈交流</string>
          </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
+         </property>
         </item>
         <item>
          <property name="text">
           <string>关于</string>
+         </property>
+         <property name="textAlignment">
+          <set>AlignCenter</set>
          </property>
         </item>
        </widget>
@@ -239,7 +260,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>978</width>
      <height>22</height>
     </rect>
    </property>

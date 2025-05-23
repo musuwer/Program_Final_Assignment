@@ -9,7 +9,7 @@ from view.login_window import LoginWindow
 # 导入PyQt5框架的核心组件，QApplication是应用程序的核心对象
 from PyQt5.QtWidgets import QApplication
 # 导入sys模块，用于与Python解释器进行交互，获取命令行参数和退出应用程序
-import sys
+import sys#11
 
 # 程序入口点，当直接运行此脚本时执行以下代码
 if __name__ == '__main__':

@@ -1,29 +1,29 @@
 * {
-    font-family: "KaiTi";
+    font-family: "KaiTi";  /* 设置全局字体为楷体 */
 }
 
 QWidget{
     /*background-color: rgb(255, 255, 255);*/
-    background-color:#D1EEEE;
-    /* background-color:#E6E6FA;*/
-
+    background-color:#D1EEEE;  /* 设置主窗口背景色为淡青色 */
+    /* background-color:#E6E6FA;*/  /* 可选背景色：淡紫色 */
 }
 
 QWidget:focus{
-    outline: none;
+    outline: none;  /* 去除窗口控件获取焦点时的外轮廓线 */
 }
 
 QPushButton[class="Aqua"] {
-    border-radius: 4px;
-    height: 30px;
-    background-color: #3bafda;
+    border-radius: 4px;  /* 按钮圆角 */
+    height: 30px;        /* 按钮高度 */
+    background-color: #3bafda;  /* 默认按钮颜色 */
 }
 
 QPushButton:hover[class="Aqua"] {
-    background-color: #4fc1e9;
+    background-color: #4fc1e9;  /* 鼠标悬停时的按钮颜色 */
 }
 
 QPushButton:pressed[class="Aqua"] {
+    /* 按下按钮时渐变色效果 */
     background: qradialgradient(cx:0.5,
     cy: 0.5,
     fx: 0.5,
@@ -34,132 +34,131 @@ QPushButton:pressed[class="Aqua"] {
 }
 
 QLineEdit {
-    border: 1px solid #aab2bd;
-    border-radius: 4px;
-    font-size: 12px;
-    padding: 5px 8px;
-    selection-background-color: lightgray;
+    border: 1px solid #aab2bd;  /* 输入框边框色 */
+    border-radius: 4px;         /* 输入框圆角 */
+    font-size: 12px;            /* 输入框字体大小 */
+    padding: 5px 8px;           /* 输入框内边距 */
+    selection-background-color: lightgray;  /* 选中文字背景色 */
 }
 
 QLineEdit:focus {
-    border: 1px solid #3bafda;
+    border: 1px solid #3bafda;  /* 输入框获得焦点时的边框色 */
 }
 
 /*QComboBox下拉框*/
 QComboBox {
-    border: 1px solid #aab2bd;
-    border-radius: 4px;
-    font-size: 12px;
-    padding: 3px 5px;
+    border: 1px solid #aab2bd;   /* 下拉框边框 */
+    border-radius: 4px;          /* 下拉框圆角 */
+    font-size: 12px;             /* 下拉框字体大小 */
+    padding: 3px 5px;            /* 下拉框内边距 */
 }
 
 QComboBox::drop-down {
-    background-color: transparent;
+    background-color: transparent;  /* 下拉按钮区域背景透明 */
 }
 
 QComboBox::down-arrow {
-    image: url(./res/style/img/more.png);
-    padding-right: 10px;
-    padding-top: 2px;
+    image: url(./res/style/img/more.png);  /* 下拉箭头图片 */
+    padding-right: 10px;  /* 箭头与右边距 */
+    padding-top: 2px;     /* 箭头与上边距 */
 }
 
 QComboBox::!editable:on {
-    border: 1px solid #3bafda;
+    border: 1px solid #3bafda;  /* 非可编辑状态下拉框的边框 */
 }
 
 QComboBox QAbstractItemView{
-    border: 2px solid #e6e9ed;
-    outline: none;
+    border: 2px solid #e6e9ed;  /* 下拉列表边框 */
+    outline: none;              /* 下拉列表无焦点轮廓 */
 }
 
 QComboBox QAbstractItemView::item{
-    height: 30px;
-    border-bottom: 1px solid #e6e9ed;
+    height: 30px;                      /* 下拉列表项高度 */
+    border-bottom: 1px solid #e6e9ed;  /* 每项下划线 */
 }
 
 QComboBox QAbstractItemView::item:hover{
-    background-color: #3bafda;
-    color: #FFFFFF;
+    background-color: #3bafda;  /* 鼠标悬停列表项背景色 */
+    color: #FFFFFF;             /* 悬停字体色 */
 }
 
 QComboBox QAbstractItemView::item:selected{
-    background-color: #3bafda;
-    color: #FFFFFF;
+    background-color: #3bafda;  /* 选中项背景色 */
+    color: #FFFFFF;             /* 选中项字体色 */
 }
 
 /*QListWidget,QListView*/
 QListWidget,QListView {
-    font: 14pt;
-    border: 1px solid #ccd1d9;
-    outline: none;
-    padding: 0;
+    font: 14pt;                    /* 列表字体大小 */
+    border: 1px solid #ccd1d9;     /* 边框色 */
+    outline: none;                 /* 无焦点轮廓 */
+    padding: 0;                    /* 去除内边距 */
 }
 
 QListWidget::item,QListView::item {
-    height: 45px;
-    padding-left: 5px;
-    border-bottom: 1px solid #e6e9ed;
-    font-size:20px;
+    height: 45px;                     /* 列表项高度 */
+    padding-left: 5px;                /* 左内边距 */
+    border-bottom: 1px solid #e6e9ed; /* 每项下划线 */
+    font-size:20px;                   /* 字体大小 */
 }
 
 QListWidget::item:hover,QListView::item:hover{
-    background-color: #3bafda;
-    color: #FFFFFF;
+    background-color: #3bafda;  /* 悬停项背景色 */
+    color: #FFFFFF;             /* 悬停项字体色 */
 }
 
 QListWidget::item:selected,QListView::item:selected{
-    background-color: #3bafda;
-    color: #FFFFFF;
+    background-color: #3bafda;  /* 选中项背景色 */
+    color: #FFFFFF;             /* 选中项字体色 */
 }
 
 /*QTableWidget,QTableView*/
 QHeaderView{
-    height: 40px;
-    border: 0 solid rgba(255, 255, 255, 0);
-    background-color: #fff;
-    border-bottom: 2px solid #e6e9ed;
+    height: 40px;                         /* 表头高度 */
+    border: 0 solid rgba(255, 255, 255, 0); /* 去边框 */
+    background-color: #fff;                /* 表头背景色 */
+    border-bottom: 2px solid #e6e9ed;      /* 表头底部分割线 */
 }
 
 QHeaderView::section{
-    height: 40px;
-    border: 0 solid rgba(255, 255, 255, 0);
-    background-color:#d1eeee;
-    outline: none;
+    height: 40px;                         /* 表头每一列高度 */
+    border: 0 solid rgba(255, 255, 255, 0); /* 无边框 */
+    background-color:#d1eeee;              /* 表头每列背景色（与主背景协调） */
+    outline: none;                        /* 去除焦点轮廓 */
 }
 
 QTableWidget,QTableView{
-    border: 1px solid #ccd1d9;
-    alternate-background-color: #f1f2f6;
+    border: 1px solid #ccd1d9;         /* 表格边框色 */
+    alternate-background-color: #f1f2f6; /* 交替行背景色 */
     /*background-color: #fff;*/
-    background-color:#ecf8f8;
-    selection-background-color : #3bafda;
-    font-size:16px;
+    background-color:#ecf8f8;           /* 整体背景色 */
+    selection-background-color : #3bafda; /* 选中行背景色 */
+    font-size:16px;                     /* 表格字体大小 */
 }
 
 /*QTabWidget*/
 QTabWidget{
-    border:1px solid #ccd1d9;
-    font-size:16px;
+    border:1px solid #ccd1d9;   /* 边框色 */
+    font-size:16px;             /* 字体大小 */
 }
 
 QTabWidget::pane { /* The tab widget frame */
-    border: none;
-    background-color: #fff;
+    border: none;                    /* 去边框 */
+    background-color: #fff;          /* 页框背景色 */
     border-radius: 3px;
     border-top-left-radius: 0;
 }
 
 QTabBar::tab {
-    padding: 8px 30px;
-    background-color: #fff;
+    padding: 8px 30px;           /* 标签页内边距 */
+    background-color: #fff;      /* 标签页背景 */
 }
 
 QTabBar::tab:first {
-    border-top-left-radius: 3px;
+    border-top-left-radius: 3px; /* 第一个标签左上圆角 */
 }
 
 QTabBar::tab:!selected {
-    border-left: 1px solid #ccd1d9;
-    background-color: #e6e9ed;
+    border-left: 1px solid #ccd1d9;   /* 非选中标签左侧边框 */
+    background-color: #e6e9ed;        /* 非选中标签背景 */
 }
-

@@ -37,18 +37,20 @@ class DBHelp:
         return count, res
 
     # 用户注册，往user表中插入1条记录
+    # 改成成就管理的字段
     def add_user(self, data):
         sql = "insert into user (id, username, password, role, create_time, delete_flag, current_login_time) " \
               "values (%s, %s, %s, %s, %s, %s, %s)"
         self._cur.execute(sql, data)
 
     # 新建书籍，往book表中插入1条记录
+    # 改成事件记录的字段
     def add_book(self, data):
         sql = "insert into book (id, book_name,author,publish_company,store_number,borrow_number,create_time," \
               "publish_date) values (%s, %s, %s, %s, %s, %s, %s, %s)"
         self._cur.execute(sql, data)
 
-    # 管理员修改图书信息
+    # 改成添加事件的字段
     def update_super(self, table_name, column_name, condition, data):
         sql = "update {} set book_name='{}', author='{}', publish_company='{}',  publish_date='{}', store_number={}" \
               " where {}='{}'".format(table_name, data[0], data[1], data[2], data[3], data[4], column_name, condition)
