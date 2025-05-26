@@ -9,21 +9,253 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from . import res1_rc
 
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(978, 631)
+        MainWindow.resize(1065, 758)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
-        self.gridLayout.setContentsMargins(5, 5, 5, 5)
-        self.gridLayout.setSpacing(3)
-        self.gridLayout.setObjectName("gridLayout")
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
+        self.frame = QtWidgets.QFrame(self.centralwidget)
+        self.frame.setGeometry(QtCore.QRect(60, 20, 972, 732))
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.frame)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.frame_2 = QtWidgets.QFrame(self.frame)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(2)
+        sizePolicy.setVerticalStretch(1)
+        sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
+        self.frame_2.setSizePolicy(sizePolicy)
+        self.frame_2.setMinimumSize(QtCore.QSize(970, 60))
+        self.frame_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"\n"
+"border-top-right-radius:30px;\n"
+"")
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.frame_2)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout.setSpacing(0)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.frame_4 = QtWidgets.QFrame(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(1)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_4.sizePolicy().hasHeightForWidth())
+        self.frame_4.setSizePolicy(sizePolicy)
+        self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_4.setObjectName("frame_4")
+        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.frame_4)
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.listWidget = QtWidgets.QListWidget(self.centralwidget)
+        self.iconButton = QtWidgets.QPushButton(self.frame_4)
+        self.iconButton.setMinimumSize(QtCore.QSize(0, 58))
+        self.iconButton.setStyleSheet("font: 12pt \"幼圆\";\n"
+"border:none;\n"
+"\n"
+"\n"
+"\n"
+"")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/icons/res1/icons/yitu.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.iconButton.setIcon(icon)
+        self.iconButton.setIconSize(QtCore.QSize(50, 50))
+        self.iconButton.setObjectName("iconButton")
+        self.horizontalLayout_2.addWidget(self.iconButton, 0, QtCore.Qt.AlignLeft)
+        self.horizontalLayout.addWidget(self.frame_4)
+        self.frame_5 = QtWidgets.QFrame(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(5)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_5.sizePolicy().hasHeightForWidth())
+        self.frame_5.setSizePolicy(sizePolicy)
+        self.frame_5.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_5.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_5.setObjectName("frame_5")
+        self.horizontalLayout_9 = QtWidgets.QHBoxLayout(self.frame_5)
+        self.horizontalLayout_9.setObjectName("horizontalLayout_9")
+        spacerItem = QtWidgets.QSpacerItem(439, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_9.addItem(spacerItem)
+        self.horizontalLayout_7 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_7.setSpacing(0)
+        self.horizontalLayout_7.setObjectName("horizontalLayout_7")
+        self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_6.setSpacing(0)
+        self.horizontalLayout_6.setObjectName("horizontalLayout_6")
+        self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_4.setObjectName("horizontalLayout_4")
+        self.label = QtWidgets.QLabel(self.frame_5)
+        self.label.setMinimumSize(QtCore.QSize(24, 0))
+        self.label.setStyleSheet("")
+        self.label.setObjectName("label")
+        self.horizontalLayout_4.addWidget(self.label, 0, QtCore.Qt.AlignRight)
+        self.current_username_label = QtWidgets.QLabel(self.frame_5)
+        self.current_username_label.setObjectName("current_username_label")
+        self.horizontalLayout_4.addWidget(self.current_username_label)
+        self.horizontalLayout_6.addLayout(self.horizontalLayout_4)
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_5.setSpacing(0)
+        self.horizontalLayout_5.setObjectName("horizontalLayout_5")
+        self.label_2 = QtWidgets.QLabel(self.frame_5)
+        self.label_2.setMinimumSize(QtCore.QSize(30, 0))
+        self.label_2.setStyleSheet("image: url(:/icons/res1/icons/role.png);")
+        self.label_2.setText("")
+        self.label_2.setObjectName("label_2")
+        self.horizontalLayout_5.addWidget(self.label_2)
+        self.current_role_label = QtWidgets.QLabel(self.frame_5)
+        self.current_role_label.setObjectName("current_role_label")
+        self.horizontalLayout_5.addWidget(self.current_role_label)
+        self.horizontalLayout_6.addLayout(self.horizontalLayout_5)
+        self.horizontalLayout_7.addLayout(self.horizontalLayout_6)
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_3.setSpacing(0)
+        self.horizontalLayout_3.setObjectName("horizontalLayout_3")
+        self.pushButton = QtWidgets.QPushButton(self.frame_5)
+        self.pushButton.setMinimumSize(QtCore.QSize(50, 58))
+        self.pushButton.setStyleSheet("QPushButton{\n"
+"    border:none;\n"
+"}\n"
+"QPushButton{\n"
+"    padding-bottom:5px;\n"
+"}\n"
+"#pushButton:hover{\n"
+"    background-color: rgb(196, 196, 196);\n"
+"    border-radius:8px;\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"#pushButton:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px;\n"
+"}\n"
+"")
+        self.pushButton.setText("")
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap(":/icons/res1/icons/change.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.pushButton.setIcon(icon1)
+        self.pushButton.setObjectName("pushButton")
+        self.horizontalLayout_3.addWidget(self.pushButton)
+        self.min_button = QtWidgets.QPushButton(self.frame_5)
+        self.min_button.setMinimumSize(QtCore.QSize(50, 58))
+        self.min_button.setStyleSheet("QPushButton{\n"
+"    border:none;\n"
+"}\n"
+"QPushButton{\n"
+"    padding-bottom:5px;\n"
+"}\n"
+"#min_button:hover{\n"
+"    background-color: rgb(196, 196, 196);\n"
+"    border-radius:8px;\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"#min_button:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px;\n"
+"}\n"
+"")
+        self.min_button.setText("")
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(":/icons/res1/icons/min.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.min_button.setIcon(icon2)
+        self.min_button.setObjectName("min_button")
+        self.horizontalLayout_3.addWidget(self.min_button)
+        self.max_button = QtWidgets.QPushButton(self.frame_5)
+        self.max_button.setMinimumSize(QtCore.QSize(50, 58))
+        self.max_button.setStyleSheet("QPushButton{\n"
+"    border:none;\n"
+"}\n"
+"QPushButton{\n"
+"    padding-bottom:5px;\n"
+"}\n"
+"#max_button:hover{\n"
+"    background-color: rgb(196, 196, 196);\n"
+"    border-radius:8px;\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"#max_button:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px;\n"
+"}\n"
+"")
+        self.max_button.setText("")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(":/icons/res1/icons/max.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.max_button.setIcon(icon3)
+        self.max_button.setObjectName("max_button")
+        self.horizontalLayout_3.addWidget(self.max_button)
+        self.close_button = QtWidgets.QPushButton(self.frame_5)
+        self.close_button.setMinimumSize(QtCore.QSize(50, 58))
+        self.close_button.setStyleSheet("QPushButton{\n"
+"    border:none;\n"
+"}\n"
+"QPushButton{\n"
+"    padding-bottom:5px;\n"
+"}\n"
+"#close_button:hover{\n"
+"    background-color: rgb(196, 196, 196);\n"
+"    border-radius:8px;\n"
+"    color: rgb(0, 0, 0);\n"
+"}\n"
+"#close_button:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px;\n"
+"}\n"
+"")
+        self.close_button.setText("")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/icons/res1/icons/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.close_button.setIcon(icon4)
+        self.close_button.setObjectName("close_button")
+        self.horizontalLayout_3.addWidget(self.close_button)
+        self.horizontalLayout_7.addLayout(self.horizontalLayout_3)
+        self.horizontalLayout_9.addLayout(self.horizontalLayout_7)
+        self.horizontalLayout.addWidget(self.frame_5)
+        self.verticalLayout.addWidget(self.frame_2)
+        self.frame_3 = QtWidgets.QFrame(self.frame)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(10)
+        sizePolicy.setHeightForWidth(self.frame_3.sizePolicy().hasHeightForWidth())
+        self.frame_3.setSizePolicy(sizePolicy)
+        self.frame_3.setMinimumSize(QtCore.QSize(970, 650))
+        self.frame_3.setStyleSheet("#frame_3{\n"
+"    border-bottom-left-radius:30px;\n"
+"    border-top-right-radius:30px;\n"
+"}\n"
+"")
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
+        self.horizontalLayout_8 = QtWidgets.QHBoxLayout(self.frame_3)
+        self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_8.setSpacing(0)
+        self.horizontalLayout_8.setObjectName("horizontalLayout_8")
+        self.frame_6 = QtWidgets.QFrame(self.frame_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(1)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_6.sizePolicy().hasHeightForWidth())
+        self.frame_6.setSizePolicy(sizePolicy)
+        self.frame_6.setStyleSheet("border-bottom-left-radius:30px;\n"
+"background-color:rgb(255, 85, 127)\n"
+"")
+        self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_6.setObjectName("frame_6")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_6)
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.listWidget = QtWidgets.QListWidget(self.frame_6)
         self.listWidget.setMaximumSize(QtCore.QSize(300, 16777215))
         self.listWidget.setObjectName("listWidget")
         item = QtWidgets.QListWidgetItem()
@@ -47,71 +279,28 @@ class Ui_MainWindow(object):
         item = QtWidgets.QListWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.listWidget.addItem(item)
-        self.horizontalLayout_2.addWidget(self.listWidget)
-        self.line = QtWidgets.QFrame(self.centralwidget)
-        self.line.setMaximumSize(QtCore.QSize(2, 16777215))
-        self.line.setStyleSheet("background-color: rgb(222, 222, 222);")
-        self.line.setFrameShape(QtWidgets.QFrame.VLine)
-        self.line.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line.setObjectName("line")
-        self.horizontalLayout_2.addWidget(self.line)
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.line_3 = QtWidgets.QFrame(self.centralwidget)
-        self.line_3.setMaximumSize(QtCore.QSize(16777215, 2))
-        self.line_3.setStyleSheet("background-color: rgb(222, 222, 222);")
-        self.line_3.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line_3.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line_3.setObjectName("line_3")
-        self.verticalLayout.addWidget(self.line_3)
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        font = QtGui.QFont()
-        font.setFamily("13 宋体")
-        font.setPointSize(14)
-        font.setBold(False)
-        font.setItalic(False)
-        self.label.setFont(font)
-        self.label.setCursor(QtGui.QCursor(QtCore.Qt.UpArrowCursor))
-        self.label.setStyleSheet("font: 14pt bold \"宋体\";")
-        self.label.setAlignment(QtCore.Qt.AlignCenter)
-        self.label.setObjectName("label")
-        self.verticalLayout.addWidget(self.label)
-        self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setStyleSheet("font: 12pt \"宋体\";")
-        self.label_2.setObjectName("label_2")
-        self.horizontalLayout.addWidget(self.label_2)
-        self.current_username_label = QtWidgets.QLabel(self.centralwidget)
-        self.current_username_label.setStyleSheet("font: 12pt \"宋体\";")
-        self.current_username_label.setObjectName("current_username_label")
-        self.horizontalLayout.addWidget(self.current_username_label)
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setStyleSheet("font: 12pt \"宋体\";")
-        self.label_4.setObjectName("label_4")
-        self.horizontalLayout.addWidget(self.label_4)
-        self.current_role_label = QtWidgets.QLabel(self.centralwidget)
-        self.current_role_label.setStyleSheet("font: 12pt \"宋体\";")
-        self.current_role_label.setObjectName("current_role_label")
-        self.horizontalLayout.addWidget(self.current_role_label)
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout.addItem(spacerItem)
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setStyleSheet("font: 12pt \"宋体\";")
-        self.pushButton.setObjectName("pushButton")
-        self.horizontalLayout.addWidget(self.pushButton)
-        self.verticalLayout.addLayout(self.horizontalLayout)
-        self.verticalLayout_2.addLayout(self.verticalLayout)
-        self.line_2 = QtWidgets.QFrame(self.centralwidget)
-        self.line_2.setMaximumSize(QtCore.QSize(16777215, 2))
-        self.line_2.setStyleSheet("background-color: rgb(222, 222, 222);")
-        self.line_2.setFrameShape(QtWidgets.QFrame.HLine)
-        self.line_2.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.line_2.setObjectName("line_2")
-        self.verticalLayout_2.addWidget(self.line_2)
-        self.stackedWidget = QtWidgets.QStackedWidget(self.centralwidget)
+        self.verticalLayout_2.addWidget(self.listWidget)
+        self.horizontalLayout_8.addWidget(self.frame_6)
+        self.frame_7 = QtWidgets.QFrame(self.frame_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(5)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.frame_7.sizePolicy().hasHeightForWidth())
+        self.frame_7.setSizePolicy(sizePolicy)
+        self.frame_7.setStyleSheet("#frame_6{\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-bottom-right-radius:30px;\n"
+"}")
+        self.frame_7.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_7.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_7.setObjectName("frame_7")
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.frame_7)
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.stackedWidget = QtWidgets.QStackedWidget(self.frame_7)
+        self.stackedWidget.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-bottom-right-radius:30px;")
         self.stackedWidget.setObjectName("stackedWidget")
         self.page = QtWidgets.QWidget()
         self.page.setObjectName("page")
@@ -119,23 +308,25 @@ class Ui_MainWindow(object):
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
         self.stackedWidget.addWidget(self.page_2)
-        self.verticalLayout_2.addWidget(self.stackedWidget)
-        self.horizontalLayout_2.addLayout(self.verticalLayout_2)
-        self.horizontalLayout_2.setStretch(0, 1)
-        self.horizontalLayout_2.setStretch(2, 5)
-        self.gridLayout.addLayout(self.horizontalLayout_2, 0, 0, 1, 1)
+        self.verticalLayout_3.addWidget(self.stackedWidget)
+        self.horizontalLayout_8.addWidget(self.frame_7)
+        self.verticalLayout.addWidget(self.frame_3)
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 978, 22))
-        self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
+        self.stackedWidget.setCurrentIndex(1)
+        self.close_button.clicked.connect(MainWindow.close) # type: ignore
+        self.max_button.clicked.connect(MainWindow.showFullScreen) # type: ignore
+        self.min_button.clicked.connect(MainWindow.showNormal) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.iconButton.setText(_translate("MainWindow", "Trip Memory"))
+        self.label.setText(_translate("MainWindow", "id："))
+        self.current_username_label.setText(_translate("MainWindow", "张三"))
+        self.current_role_label.setText(_translate("MainWindow", "普通用户"))
         __sortingEnabled = self.listWidget.isSortingEnabled()
         self.listWidget.setSortingEnabled(False)
         item = self.listWidget.item(0)
@@ -153,9 +344,3 @@ class Ui_MainWindow(object):
         item = self.listWidget.item(6)
         item.setText(_translate("MainWindow", "关于"))
         self.listWidget.setSortingEnabled(__sortingEnabled)
-        self.label.setText(_translate("MainWindow", "Trip Memory"))
-        self.label_2.setText(_translate("MainWindow", "用户:"))
-        self.current_username_label.setText(_translate("MainWindow", "张三"))
-        self.label_4.setText(_translate("MainWindow", "角色:"))
-        self.current_role_label.setText(_translate("MainWindow", "普通用户"))
-        self.pushButton.setText(_translate("MainWindow", "登出"))

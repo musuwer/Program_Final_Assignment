@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="icons">
+    <file>res1/icons/id.png</file>
+    <file>res1/icons/id.png</file>
+    <file>res1/icons/role.png</file>
+    <file>res1/icons/change.png</file>
     <file>res1/icons/return.png</file>
     <file>res1/icons/close.png</file>
     <file>res1/icons/login.png</file>

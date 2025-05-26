@@ -2,7 +2,7 @@
 文件名：main_window.py
 描述：实现主窗口的交互
 """
-
+from PyQt5 import QtCore
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from ui.main_window import Ui_MainWindow
@@ -67,6 +67,26 @@ class MainWindow(Ui_MainWindow, QMainWindow):
             self.stackedWidget.addWidget(MessageInfoUserWindow(user_role=self.role, username=self.username))
 
         self.stackedWidget.addWidget(AboutWindow())  # 关于页面
+
+    ### 重新复写函数，使得框可以自由拖动 ####
+    # 鼠标按下
+    def mousePressEvent(self, event):
+        if event.button() == QtCore.Qt.LeftButton:
+            self._isTracking = True
+            self._startPos = event.globalPos() - self.frameGeometry().topLeft()
+            event.accept()
+
+    # 鼠标移动
+    def mouseMoveEvent(self, event):
+        if self._isTracking and event.buttons() & QtCore.Qt.LeftButton:
+            self.move(event.globalPos() - self._startPos)
+            event.accept()
+
+    # 鼠标释放
+    def mouseReleaseEvent(self, event):
+        if event.button() == QtCore.Qt.LeftButton:
+            self._isTracking = False
+            event.accept()
 
     def init_slot(self):
         """

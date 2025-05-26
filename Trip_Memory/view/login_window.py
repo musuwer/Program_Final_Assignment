@@ -167,6 +167,10 @@ class LoginWindow(Ui_Form, QWidget):
 
             self.main_window = MainWindow(login=self, username=username, role=self.role)  # 创建主窗口对象
 
+            # 隐藏框 form:
+            self.main_window.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+            self.main_window.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
             print("最终登入系统时间:" + datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))  # 打印当前时间
             self.main_window.show()  # 显示主窗口
             self.close()  # 关闭登录窗口
