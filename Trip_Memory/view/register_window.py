@@ -4,6 +4,8 @@
 """
 
 import sys
+
+from PyQt5 import QtCore
 from PyQt5.QtCore import Qt  # Qt常量，窗口模态等
 from PyQt5.QtGui import QIcon  # 设置窗口图标
 from PyQt5.QtWidgets import QWidget, QApplication  # QWidget基类和应用对象
@@ -38,6 +40,26 @@ class RegisterWindow(Ui_Form, QWidget):
 
         self.setWindowModality(Qt.ApplicationModal)  # 设置为应用模态（注册时不能操作主界面）
         self.setWindowFlags(Qt.WindowCloseButtonHint)  # 只允许关闭
+
+    ### 重新复写函数，使得框可以自由拖动 ####
+    # 鼠标按下
+    def mousePressEvent(self, event):
+        if event.button() == QtCore.Qt.LeftButton:
+            self._isTracking = True
+            self._startPos = event.globalPos() - self.frameGeometry().topLeft()
+            event.accept()
+
+    # 鼠标移动
+    def mouseMoveEvent(self, event):
+        if self._isTracking and event.buttons() & QtCore.Qt.LeftButton:
+            self.move(event.globalPos() - self._startPos)
+            event.accept()
+
+    # 鼠标释放
+    def mouseReleaseEvent(self, event):
+        if event.button() == QtCore.Qt.LeftButton:
+            self._isTracking = False
+            event.accept()
 
     def register(self):
         """

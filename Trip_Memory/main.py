@@ -22,6 +22,9 @@ if __name__ == '__main__':
     # 该窗口包含用户登录所需的UI元素（如用户名/密码输入框、登录按钮等）
     win = LoginWindow()
 
+    # 每次重新编译ui后的py文件要用 : from . import res1_rc 原先的import无效 ？？？
+    # 同时 要删除 结尾生成的 import res1_rc才可以
+
     # 隐藏框 form:
     win.setWindowFlags(QtCore.Qt.FramelessWindowHint)
     win.setAttribute(QtCore.Qt.WA_TranslucentBackground)

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>865</width>
-    <height>537</height>
+    <width>854</width>
+    <height>551</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -254,13 +254,18 @@ QPushButton{
 	background-color: rgb(196, 196, 196);
 	border-radius:8px;
 	color: rgb(0, 0, 0);
-}</string>
+}
+#min_button:pressed{
+	padding-top:3px;
+	padding-left:3px;
+}
+</string>
                  </property>
                  <property name="text">
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="res.qrc">
+                  <iconset resource="res1.qrc">
                    <normaloff>:/icons/res1/icons/min.png</normaloff>:/icons/res1/icons/min.png</iconset>
                  </property>
                 </widget>
@@ -284,13 +289,18 @@ QPushButton{
 	background-color: rgb(196, 196, 196);
 	border-radius:8px;
 	color: rgb(0, 0, 0);
-}</string>
+}
+#max_button:pressed{
+	padding-top:3px;
+	padding-left:3px;
+}
+</string>
                  </property>
                  <property name="text">
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="res.qrc">
+                  <iconset resource="res1.qrc">
                    <normaloff>:/icons/res1/icons/max.png</normaloff>:/icons/res1/icons/max.png</iconset>
                  </property>
                 </widget>
@@ -314,13 +324,18 @@ QPushButton{
 	background-color: rgb(196, 196, 196);
 	border-radius:8px;
 	color: rgb(0, 0, 0);
-}</string>
+}
+#close_button:pressed{
+	padding-top:3px;
+	padding-left:3px;
+}
+</string>
                  </property>
                  <property name="text">
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="res.qrc">
+                  <iconset resource="res1.qrc">
                    <normaloff>:/icons/res1/icons/close.png</normaloff>:/icons/res1/icons/close.png</iconset>
                  </property>
                 </widget>
@@ -428,24 +443,22 @@ border-radius:8px;</string>
 	border-radius:8px;
 }
 #login_pushButton:hover{
-
 	background-color: rgb(196, 196, 196);
-
 	color: rgb(0, 0, 0);
 }
-#login_pushButton:press{
+
+#login_pushButton:pressed{
 	padding-top:5px;
 	padding-left:5px;
 }
-
 </string>
              </property>
              <property name="text">
               <string>登录</string>
              </property>
              <property name="icon">
-              <iconset>
-               <normaloff>:/icons/res1/icons/登录.png</normaloff>:/icons/res1/icons/登录.png</iconset>
+              <iconset resource="res1.qrc">
+               <normaloff>:/icons/res1/icons/login.png</normaloff>:/icons/res1/icons/login.png</iconset>
              </property>
             </widget>
             <widget class="QCheckBox" name="checkBox">
@@ -492,6 +505,10 @@ border-radius:8px;</string>
 	padding-top:5px;
 	padding-left:5px;
 }
+#register_pushButton:pressed{
+	padding-top:5px;
+	padding-left:5px;
+}
 
 </string>
              </property>
@@ -499,8 +516,8 @@ border-radius:8px;</string>
               <string>注册</string>
              </property>
              <property name="icon">
-              <iconset>
-               <normaloff>:/icons/res1/icons/注册邀请.png</normaloff>:/icons/res1/icons/注册邀请.png</iconset>
+              <iconset resource="res1.qrc">
+               <normaloff>:/icons/res1/icons/register.png</normaloff>:/icons/res1/icons/register.png</iconset>
              </property>
             </widget>
             <widget class="QLabel" name="label_3">
@@ -563,6 +580,7 @@ border-radius:8px;</string>
                  <string notr="true">QPushButton{
 	border:none;
 }
+
 #qq_login:hover{
 	background-color: rgb(196, 196, 196);
 	
@@ -571,13 +589,17 @@ border-radius:8px;</string>
 }
 QPushButton{
 	padding-bottom:5px;
+}
+#qq_login:pressed{
+	padding-top:5px;
+	padding-left:5px;
 }</string>
                 </property>
                 <property name="text">
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="res.qrc">
+                 <iconset resource="res1.qrc">
                   <normaloff>:/icons/res1/icons/QQ.png</normaloff>:/icons/res1/icons/QQ.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -614,13 +636,17 @@ QPushButton{
 	background-color: rgb(196, 196, 196);
 	border-radius:8px;
 	color: rgb(0, 0, 0);
+}
+#wechat_login:pressed{
+	padding-top:5px;
+	padding-left:5px;
 }</string>
                 </property>
                 <property name="text">
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="res.qrc">
+                 <iconset resource="res1.qrc">
                   <normaloff>:/icons/res1/icons/wechat.png</normaloff>:/icons/res1/icons/wechat.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -656,13 +682,17 @@ QPushButton{
 	background-color: rgb(196, 196, 196);
 	border-radius:8px;
 	color: rgb(0, 0, 0);
+}
+#weibo_login:pressed{
+	padding-top:5px;
+	padding-left:5px;
 }</string>
                 </property>
                 <property name="text">
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="res.qrc">
+                 <iconset resource="res1.qrc">
                   <normaloff>:/icons/res1/icons/weibo.png</normaloff>:/icons/res1/icons/weibo.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -687,7 +717,56 @@ QPushButton{
   </layout>
  </widget>
  <resources>
-  <include location="res.qrc"/>
+  <include location="res1.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>min_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>showNormal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>717</x>
+     <y>22</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>716</x>
+     <y>-15</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>max_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>showFullScreen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>765</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>764</x>
+     <y>-7</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>close_button</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>829</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>855</x>
+     <y>5</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

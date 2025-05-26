@@ -104,6 +104,11 @@ class LoginWindow(Ui_Form, QWidget):
         if tag == 'register':
             self.register_win = RegisterWindow(self)  # 创建注册窗口，父窗口为当前窗口
             self.hide()  # 隐藏登录窗口
+
+            # 隐藏框 form:
+            self.register_win.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+            self.register_win.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
             self.register_win.show()  # 显示注册窗口
 
         # 登录流程

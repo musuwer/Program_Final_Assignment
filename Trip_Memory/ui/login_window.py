@@ -15,7 +15,7 @@ from . import res1_rc
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(865, 537)
+        Form.resize(854, 551)
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout.setSpacing(0)
@@ -112,7 +112,12 @@ class Ui_Form(object):
 "    background-color: rgb(196, 196, 196);\n"
 "    border-radius:8px;\n"
 "    color: rgb(0, 0, 0);\n"
-"}")
+"}\n"
+"#min_button:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px;\n"
+"}\n"
+"")
         self.min_button.setText("")
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap(":/icons/res1/icons/min.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -131,7 +136,12 @@ class Ui_Form(object):
 "    background-color: rgb(196, 196, 196);\n"
 "    border-radius:8px;\n"
 "    color: rgb(0, 0, 0);\n"
-"}")
+"}\n"
+"#max_button:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px;\n"
+"}\n"
+"")
         self.max_button.setText("")
         icon1 = QtGui.QIcon()
         icon1.addPixmap(QtGui.QPixmap(":/icons/res1/icons/max.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -150,7 +160,12 @@ class Ui_Form(object):
 "    background-color: rgb(196, 196, 196);\n"
 "    border-radius:8px;\n"
 "    color: rgb(0, 0, 0);\n"
-"}")
+"}\n"
+"#close_button:pressed{\n"
+"    padding-top:3px;\n"
+"    padding-left:3px;\n"
+"}\n"
+"")
         self.close_button.setText("")
         icon2 = QtGui.QIcon()
         icon2.addPixmap(QtGui.QPixmap(":/icons/res1/icons/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
@@ -195,19 +210,17 @@ class Ui_Form(object):
 "    border-radius:8px;\n"
 "}\n"
 "#login_pushButton:hover{\n"
-"\n"
 "    background-color: rgb(196, 196, 196);\n"
-"\n"
 "    color: rgb(0, 0, 0);\n"
 "}\n"
-"#login_pushButton:press{\n"
+"\n"
+"#login_pushButton:pressed{\n"
 "    padding-top:5px;\n"
 "    padding-left:5px;\n"
 "}\n"
-"\n"
 "")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(":/icons/res1/icons/登录.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(":/icons/res1/icons/login.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.login_pushButton.setIcon(icon3)
         self.login_pushButton.setObjectName("login_pushButton")
         self.checkBox = QtWidgets.QCheckBox(self.widget_2)
@@ -234,10 +247,14 @@ class Ui_Form(object):
 "    padding-top:5px;\n"
 "    padding-left:5px;\n"
 "}\n"
+"#register_pushButton:pressed{\n"
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
+"}\n"
 "\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/icons/res1/icons/注册邀请.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(":/icons/res1/icons/register.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.register_pushButton.setIcon(icon4)
         self.register_pushButton.setObjectName("register_pushButton")
         self.label_3 = QtWidgets.QLabel(self.widget_2)
@@ -261,6 +278,7 @@ class Ui_Form(object):
         self.qq_login.setStyleSheet("QPushButton{\n"
 "    border:none;\n"
 "}\n"
+"\n"
 "#qq_login:hover{\n"
 "    background-color: rgb(196, 196, 196);\n"
 "    \n"
@@ -269,6 +287,10 @@ class Ui_Form(object):
 "}\n"
 "QPushButton{\n"
 "    padding-bottom:5px;\n"
+"}\n"
+"#qq_login:pressed{\n"
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
 "}")
         self.qq_login.setText("")
         icon5 = QtGui.QIcon()
@@ -291,6 +313,10 @@ class Ui_Form(object):
 "    background-color: rgb(196, 196, 196);\n"
 "    border-radius:8px;\n"
 "    color: rgb(0, 0, 0);\n"
+"}\n"
+"#wechat_login:pressed{\n"
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
 "}")
         self.wechat_login.setText("")
         icon6 = QtGui.QIcon()
@@ -312,6 +338,10 @@ class Ui_Form(object):
 "    background-color: rgb(196, 196, 196);\n"
 "    border-radius:8px;\n"
 "    color: rgb(0, 0, 0);\n"
+"}\n"
+"#weibo_login:pressed{\n"
+"    padding-top:5px;\n"
+"    padding-left:5px;\n"
 "}")
         self.weibo_login.setText("")
         icon7 = QtGui.QIcon()
@@ -325,6 +355,9 @@ class Ui_Form(object):
         self.verticalLayout.addWidget(self.frame)
 
         self.retranslateUi(Form)
+        self.min_button.clicked.connect(Form.showNormal) # type: ignore
+        self.max_button.clicked.connect(Form.showFullScreen) # type: ignore
+        self.close_button.clicked.connect(Form.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -339,4 +372,3 @@ class Ui_Form(object):
         self.checkBox.setText(_translate("Form", "记住"))
         self.register_pushButton.setText(_translate("Form", "注册"))
         self.label_4.setText(_translate("Form", "其他登录方式："))
-
