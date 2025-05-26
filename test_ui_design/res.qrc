@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>close.png</file>
+    <file>login.png</file>
+    <file>max.png</file>
+    <file>min.png</file>
+    <file>QQ.png</file>
+    <file>register.png</file>
+    <file>wechat.png</file>
+    <file>weibo.png</file>
+    <file>yitu.png</file>
+  </qresource>
+</RCC>

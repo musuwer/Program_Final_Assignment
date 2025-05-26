@@ -1,3 +1,6 @@
+
+"""
+
 * {
     font-family: "KaiTi";  /* 设置全局字体为楷体 */
 }
@@ -162,3 +165,5 @@ QTabBar::tab:!selected {
     border-left: 1px solid #ccd1d9;   /* 非选中标签左侧边框 */
     background-color: #e6e9ed;        /* 非选中标签背景 */
 }
+"""
+

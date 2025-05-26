@@ -9,7 +9,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from . import res1_rc
 
 
 class Ui_Form(object):
@@ -39,10 +38,10 @@ class Ui_Form(object):
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
-        self.layoutWidget = QtWidgets.QWidget(self.frame_2)
-        self.layoutWidget.setGeometry(QtCore.QRect(10, 10, 415, 521))
-        self.layoutWidget.setObjectName("layoutWidget")
-        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.layoutWidget)
+        self.widget = QtWidgets.QWidget(self.frame_2)
+        self.widget.setGeometry(QtCore.QRect(10, 10, 415, 521))
+        self.widget.setObjectName("widget")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.widget)
         self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
@@ -54,15 +53,15 @@ class Ui_Form(object):
         self.horizontalLayout_4.addItem(spacerItem1)
         self.verticalLayout_2 = QtWidgets.QVBoxLayout()
         self.verticalLayout_2.setObjectName("verticalLayout_2")
-        self.label = QtWidgets.QLabel(self.layoutWidget)
+        self.label = QtWidgets.QLabel(self.widget)
         self.label.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 24pt \"Algerian\";")
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label)
-        self.widget = QtWidgets.QWidget(self.layoutWidget)
-        self.widget.setObjectName("widget")
-        self.verticalLayout_2.addWidget(self.widget)
-        self.label_2 = QtWidgets.QLabel(self.layoutWidget)
+        self.widget1 = QtWidgets.QWidget(self.widget)
+        self.widget1.setObjectName("widget1")
+        self.verticalLayout_2.addWidget(self.widget1)
+        self.label_2 = QtWidgets.QLabel(self.widget)
         self.label_2.setStyleSheet("color: rgb(255, 255, 255);\n"
 "font: 24pt \"Algerian\";")
         self.label_2.setObjectName("label_2")
@@ -88,10 +87,10 @@ class Ui_Form(object):
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
-        self.layoutWidget1 = QtWidgets.QWidget(self.frame_4)
-        self.layoutWidget1.setGeometry(QtCore.QRect(-8, 0, 461, 34))
-        self.layoutWidget1.setObjectName("layoutWidget1")
-        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.layoutWidget1)
+        self.widget2 = QtWidgets.QWidget(self.frame_4)
+        self.widget2.setGeometry(QtCore.QRect(-8, 0, 461, 34))
+        self.widget2.setObjectName("widget2")
+        self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.widget2)
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_3.setSpacing(0)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
@@ -100,7 +99,7 @@ class Ui_Form(object):
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.min_button = QtWidgets.QPushButton(self.layoutWidget1)
+        self.min_button = QtWidgets.QPushButton(self.widget2)
         self.min_button.setMinimumSize(QtCore.QSize(50, 30))
         self.min_button.setStyleSheet("QPushButton{\n"
 "    border:none;\n"
@@ -115,11 +114,11 @@ class Ui_Form(object):
 "}")
         self.min_button.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icons/res1/icons/min.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/icons/res1/icons/缩小.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.min_button.setIcon(icon)
         self.min_button.setObjectName("min_button")
         self.horizontalLayout_2.addWidget(self.min_button)
-        self.max_button = QtWidgets.QPushButton(self.layoutWidget1)
+        self.max_button = QtWidgets.QPushButton(self.widget2)
         self.max_button.setMinimumSize(QtCore.QSize(50, 30))
         self.max_button.setStyleSheet("QPushButton{\n"
 "    border:none;\n"
@@ -134,11 +133,11 @@ class Ui_Form(object):
 "}")
         self.max_button.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icons/res1/icons/max.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(":/icons/res1/icons/全屏.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.max_button.setIcon(icon1)
         self.max_button.setObjectName("max_button")
         self.horizontalLayout_2.addWidget(self.max_button)
-        self.close_button = QtWidgets.QPushButton(self.layoutWidget1)
+        self.close_button = QtWidgets.QPushButton(self.widget2)
         self.close_button.setMinimumSize(QtCore.QSize(50, 30))
         self.close_button.setStyleSheet("QPushButton{\n"
 "    border:none;\n"
@@ -242,20 +241,20 @@ class Ui_Form(object):
         self.register_pushButton.setObjectName("register_pushButton")
         self.label_3 = QtWidgets.QLabel(self.widget_2)
         self.label_3.setGeometry(QtCore.QRect(100, 0, 121, 121))
-        self.label_3.setStyleSheet("image: url(:/icons/res1/icons/yitu.png);")
+        self.label_3.setStyleSheet("image: url(:/icons/res1/icons/app-icon.png);")
         self.label_3.setText("")
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(self.widget_2)
         self.label_4.setGeometry(QtCore.QRect(30, 350, 91, 16))
         self.label_4.setStyleSheet("color: rgb(127,127,149);")
         self.label_4.setObjectName("label_4")
-        self.layoutWidget2 = QtWidgets.QWidget(self.widget_2)
-        self.layoutWidget2.setGeometry(QtCore.QRect(30, 380, 271, 41))
-        self.layoutWidget2.setObjectName("layoutWidget2")
-        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.layoutWidget2)
+        self.widget3 = QtWidgets.QWidget(self.widget_2)
+        self.widget3.setGeometry(QtCore.QRect(30, 380, 271, 41))
+        self.widget3.setObjectName("widget3")
+        self.horizontalLayout_5 = QtWidgets.QHBoxLayout(self.widget3)
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_5.setObjectName("horizontalLayout_5")
-        self.qq_login = QtWidgets.QPushButton(self.layoutWidget2)
+        self.qq_login = QtWidgets.QPushButton(self.widget3)
         self.qq_login.setMinimumSize(QtCore.QSize(40, 30))
         self.qq_login.setMaximumSize(QtCore.QSize(50, 16777215))
         self.qq_login.setStyleSheet("QPushButton{\n"
@@ -277,7 +276,7 @@ class Ui_Form(object):
         self.qq_login.setIconSize(QtCore.QSize(30, 30))
         self.qq_login.setObjectName("qq_login")
         self.horizontalLayout_5.addWidget(self.qq_login)
-        self.wechat_login = QtWidgets.QPushButton(self.layoutWidget2)
+        self.wechat_login = QtWidgets.QPushButton(self.widget3)
         self.wechat_login.setMinimumSize(QtCore.QSize(50, 30))
         self.wechat_login.setMaximumSize(QtCore.QSize(50, 16777215))
         self.wechat_login.setStyleSheet("QPushButton{\n"
@@ -294,12 +293,12 @@ class Ui_Form(object):
 "}")
         self.wechat_login.setText("")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap(":/icons/res1/icons/wechat.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap(":/icons/res1/icons/微信 (1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.wechat_login.setIcon(icon6)
         self.wechat_login.setIconSize(QtCore.QSize(30, 30))
         self.wechat_login.setObjectName("wechat_login")
         self.horizontalLayout_5.addWidget(self.wechat_login)
-        self.weibo_login = QtWidgets.QPushButton(self.layoutWidget2)
+        self.weibo_login = QtWidgets.QPushButton(self.widget3)
         self.weibo_login.setMinimumSize(QtCore.QSize(50, 30))
         self.weibo_login.setMaximumSize(QtCore.QSize(50, 16777215))
         self.weibo_login.setStyleSheet("QPushButton{\n"
@@ -315,7 +314,7 @@ class Ui_Form(object):
 "}")
         self.weibo_login.setText("")
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap(":/icons/res1/icons/weibo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap(":/icons/res1/icons/微博.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.weibo_login.setIcon(icon7)
         self.weibo_login.setIconSize(QtCore.QSize(30, 30))
         self.weibo_login.setObjectName("weibo_login")
@@ -339,4 +338,4 @@ class Ui_Form(object):
         self.checkBox.setText(_translate("Form", "记住"))
         self.register_pushButton.setText(_translate("Form", "注册"))
         self.label_4.setText(_translate("Form", "其他登录方式："))
-
+import res2_rc

@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>res1/icons/QQ.png</file>
+    <file>res1/icons/微博.png</file>
+    <file>res1/icons/微信 (1).png</file>
+    <file>res1/icons/app-icon.png</file>
+    <file>res1/icons/close.png</file>
+    <file>res1/icons/登录.png</file>
+    <file>res1/icons/登录-微信登录.png</file>
+    <file>res1/icons/全屏.png</file>
+    <file>res1/icons/缩小.png</file>
+    <file>res1/icons/注册邀请.png</file>
+  </qresource>
+</RCC>

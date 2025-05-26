@@ -1,0 +1,23 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/存储.png</file>
+    <file>icons/房子.png</file>
+    <file>icons/错号.png</file>
+    <file>icons/打开文件.png</file>
+    <file>icons/登录.png</file>
+    <file>icons/二维码.png</file>
+    <file>icons/减去.png</file>
+    <file>icons/密码.png</file>
+    <file>icons/全屏.png</file>
+    <file>icons/设置.png</file>
+    <file>icons/退出.png</file>
+    <file>icons/问价.png</file>
+    <file>icons/小屏.png</file>
+    <file>icons/用户.png</file>
+    <file>icons/运行.png</file>
+    <file>icons/注册.png</file>
+  </qresource>
+  <qresource prefix="images">
+    <file>images/02.png</file>
+  </qresource>
+</RCC>

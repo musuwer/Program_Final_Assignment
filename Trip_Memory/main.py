@@ -3,13 +3,14 @@
 描述：项目入口，想要演示本项目，运行本文件即可
 注意事项：在运行本文件之前确保已启动了Mysql服务，并且已成功运行过generate_data.py文件
 """
+from PyQt5 import QtCore
 
 # 导入登录窗口类，这是自定义的视图类，用于显示登录界面
 from view.login_window import LoginWindow
 # 导入PyQt5框架的核心组件，QApplication是应用程序的核心对象
 from PyQt5.QtWidgets import QApplication
 # 导入sys模块，用于与Python解释器进行交互，获取命令行参数和退出应用程序
-import sys#11
+import sys
 
 # 程序入口点，当直接运行此脚本时执行以下代码
 if __name__ == '__main__':
@@ -20,6 +21,11 @@ if __name__ == '__main__':
     # 创建登录窗口实例，LoginWindow是自定义的窗口类，继承自QWidget或QMainWindow
     # 该窗口包含用户登录所需的UI元素（如用户名/密码输入框、登录按钮等）
     win = LoginWindow()
+
+    # 隐藏框 form:
+    win.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+    win.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
 
     # 显示登录窗口，默认情况下窗口是隐藏的，调用show()方法将其显示在屏幕上
     win.show()

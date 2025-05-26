@@ -70,7 +70,7 @@ border-bottom-left-radius:30px;
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QWidget" name="layoutWidget">
+        <widget class="QWidget" name="">
          <property name="geometry">
           <rect>
            <x>10</x>
@@ -204,7 +204,7 @@ border-bottom-right-radius:30px;</string>
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QWidget" name="layoutWidget">
+           <widget class="QWidget" name="">
             <property name="geometry">
              <rect>
               <x>-8</x>
@@ -260,8 +260,8 @@ QPushButton{
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="res.qrc">
-                   <normaloff>:/icons/res1/icons/min.png</normaloff>:/icons/res1/icons/min.png</iconset>
+                  <iconset resource="../../test_ui_design/res2.qrc">
+                   <normaloff>:/icons/res1/icons/缩小.png</normaloff>:/icons/res1/icons/缩小.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -290,8 +290,8 @@ QPushButton{
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="res.qrc">
-                   <normaloff>:/icons/res1/icons/max.png</normaloff>:/icons/res1/icons/max.png</iconset>
+                  <iconset resource="../../test_ui_design/res2.qrc">
+                   <normaloff>:/icons/res1/icons/全屏.png</normaloff>:/icons/res1/icons/全屏.png</iconset>
                  </property>
                 </widget>
                </item>
@@ -320,7 +320,7 @@ QPushButton{
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="res.qrc">
+                  <iconset resource="../../test_ui_design/res2.qrc">
                    <normaloff>:/icons/res1/icons/close.png</normaloff>:/icons/res1/icons/close.png</iconset>
                  </property>
                 </widget>
@@ -444,7 +444,7 @@ border-radius:8px;</string>
               <string>登录</string>
              </property>
              <property name="icon">
-              <iconset>
+              <iconset resource="../../test_ui_design/res2.qrc">
                <normaloff>:/icons/res1/icons/登录.png</normaloff>:/icons/res1/icons/登录.png</iconset>
              </property>
             </widget>
@@ -499,7 +499,7 @@ border-radius:8px;</string>
               <string>注册</string>
              </property>
              <property name="icon">
-              <iconset>
+              <iconset resource="../../test_ui_design/res2.qrc">
                <normaloff>:/icons/res1/icons/注册邀请.png</normaloff>:/icons/res1/icons/注册邀请.png</iconset>
              </property>
             </widget>
@@ -513,7 +513,7 @@ border-radius:8px;</string>
               </rect>
              </property>
              <property name="styleSheet">
-              <string notr="true">image: url(:/icons/res1/icons/yitu.png);</string>
+              <string notr="true">image: url(:/icons/res1/icons/app-icon.png);</string>
              </property>
              <property name="text">
               <string/>
@@ -535,7 +535,7 @@ border-radius:8px;</string>
               <string>其他登录方式：</string>
              </property>
             </widget>
-            <widget class="QWidget" name="layoutWidget">
+            <widget class="QWidget" name="">
              <property name="geometry">
               <rect>
                <x>30</x>
@@ -577,7 +577,7 @@ QPushButton{
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="res.qrc">
+                 <iconset resource="../../test_ui_design/res2.qrc">
                   <normaloff>:/icons/res1/icons/QQ.png</normaloff>:/icons/res1/icons/QQ.png</iconset>
                 </property>
                 <property name="iconSize">
@@ -620,8 +620,8 @@ QPushButton{
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="res.qrc">
-                  <normaloff>:/icons/res1/icons/wechat.png</normaloff>:/icons/res1/icons/wechat.png</iconset>
+                 <iconset resource="../../test_ui_design/res2.qrc">
+                  <normaloff>:/icons/res1/icons/微信 (1).png</normaloff>:/icons/res1/icons/微信 (1).png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -662,8 +662,8 @@ QPushButton{
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset resource="res.qrc">
-                  <normaloff>:/icons/res1/icons/weibo.png</normaloff>:/icons/res1/icons/weibo.png</iconset>
+                 <iconset resource="../../test_ui_design/res2.qrc">
+                  <normaloff>:/icons/res1/icons/微博.png</normaloff>:/icons/res1/icons/微博.png</iconset>
                 </property>
                 <property name="iconSize">
                  <size>
@@ -687,7 +687,7 @@ QPushButton{
   </layout>
  </widget>
  <resources>
-  <include location="res.qrc"/>
+  <include location="../../test_ui_design/res2.qrc"/>
  </resources>
  <connections/>
 </ui>

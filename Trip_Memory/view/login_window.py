@@ -4,6 +4,8 @@
 """
 
 from threading import Thread  # 导入线程类，用于多线程执行登录验证
+
+from PyQt5 import QtCore
 from PyQt5.QtGui import QIcon  # 导入QIcon类，用于设置窗口图标
 from PyQt5.QtWidgets import QWidget  # 导入QWidget作为自定义窗口基类
 from PyQt5.QtCore import pyqtSignal, Qt  # 导入信号与常量
@@ -59,6 +61,25 @@ class LoginWindow(Ui_Form, QWidget):
         # 只允许关闭和最小化
         self.setWindowFlags(Qt.WindowCloseButtonHint|Qt.WindowMinimizeButtonHint)
 
+    ### 重新复写函数，使得框可以自由拖动 ####
+    # 鼠标按下
+    def mousePressEvent(self, event):
+        if event.button() == QtCore.Qt.LeftButton:
+            self._isTracking = True
+            self._startPos = event.globalPos() - self.frameGeometry().topLeft()
+            event.accept()
+
+    # 鼠标移动
+    def mouseMoveEvent(self, event):
+        if self._isTracking and event.buttons() & QtCore.Qt.LeftButton:
+            self.move(event.globalPos() - self._startPos)
+            event.accept()
+
+    # 鼠标释放
+    def mouseReleaseEvent(self, event):
+        if event.button() == QtCore.Qt.LeftButton:
+            self._isTracking = False
+            event.accept()
 
     def init_slot(self):
         """
