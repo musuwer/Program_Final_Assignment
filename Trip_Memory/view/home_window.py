@@ -57,6 +57,15 @@ class HomeWindow(Ui_Form, QWidget):
             self.add_annou_pushButton.setVisible(False)
             self.add_goal_pushButton.setVisible(True)
 
+        from ui.clock import AnalogClock
+        from PyQt5.QtWidgets import QVBoxLayout
+
+        self.analog_clock = AnalogClock(self.clock_widget)
+        self.analog_clock.setMinimumSize(200, 200)
+        layout = QVBoxLayout(self.clock_widget)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.addWidget(self.analog_clock)
+
     def init_ui(self):
         """初始化表格等UI属性"""
         # 目标表格
@@ -65,7 +74,11 @@ class HomeWindow(Ui_Form, QWidget):
         self.book_recommend_tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.book_recommend_tableWidget.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.book_recommend_tableWidget.setColumnCount(5)
-        self.book_recommend_tableWidget.setHorizontalHeaderLabels(["名称", "计划", "进度", "成就", "创建时间"])
+
+        # 修改地方：需要手动更改 ？？？？？？？？？？？
+        self.book_recommend_tableWidget.setHorizontalHeaderLabels(["名称", "计划", "进度", "开始时间", "截止时间"])
+
+
 
         # 公告表格
         self.annou_info_tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
@@ -79,6 +92,10 @@ class HomeWindow(Ui_Form, QWidget):
         self.add_goal_pushButton.setMinimumWidth(60)
         self.add_annou_pushButton.setProperty('class', 'Aqua')
         self.add_annou_pushButton.setMinimumWidth(60)
+
+        # 取消公共栏的左侧序号栏（不好看而且是方边角）
+        self.book_recommend_tableWidget.verticalHeader().setVisible(False)
+        self.annou_info_tableWidget.verticalHeader().setVisible(False)
 
     # ---------- 目标表相关 ----------
     def refresh_goal_table(self):

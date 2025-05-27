@@ -394,6 +394,9 @@ QPushButton{
               <string notr="true">border:1px solid rgb(0,0,0);
 border-radius:8px;</string>
              </property>
+             <property name="text">
+              <string>admin</string>
+             </property>
              <property name="placeholderText">
               <string>账号：</string>
              </property>
@@ -417,7 +420,7 @@ border-radius:8px;</string>
 border-radius:8px;</string>
              </property>
              <property name="text">
-              <string/>
+              <string>admin</string>
              </property>
              <property name="echoMode">
               <enum>QLineEdit::Password</enum>

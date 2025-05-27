@@ -11,15 +11,19 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from . import res1_rc
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1065, 758)
+        MainWindow.resize(1098, 810)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(60, 20, 972, 732))
+        self.frame.setStyleSheet("#frame{\n"
+"    border-top-left-radius:30px;\n"
+"}\n"
+"")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -37,6 +41,7 @@ class Ui_MainWindow(object):
         self.frame_2.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "\n"
 "border-top-right-radius:30px;\n"
+"border-top-left-radius:30px;\n"
 "")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -51,6 +56,7 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_4.sizePolicy().hasHeightForWidth())
         self.frame_4.setSizePolicy(sizePolicy)
+        self.frame_4.setStyleSheet("border-top-right-radius:30px;")
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_4.setObjectName("frame_4")
@@ -59,8 +65,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setSpacing(0)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
         self.iconButton = QtWidgets.QPushButton(self.frame_4)
-        self.iconButton.setMinimumSize(QtCore.QSize(0, 58))
-        self.iconButton.setStyleSheet("font: 12pt \"幼圆\";\n"
+        self.iconButton.setMinimumSize(QtCore.QSize(0, 50))
+        self.iconButton.setStyleSheet("\n"
+"font: 12pt \"Algerian\";\n"
+"color: rgb(255, 109, 25);\n"
 "border:none;\n"
 "\n"
 "\n"
@@ -71,7 +79,7 @@ class Ui_MainWindow(object):
         self.iconButton.setIcon(icon)
         self.iconButton.setIconSize(QtCore.QSize(50, 50))
         self.iconButton.setObjectName("iconButton")
-        self.horizontalLayout_2.addWidget(self.iconButton, 0, QtCore.Qt.AlignLeft)
+        self.horizontalLayout_2.addWidget(self.iconButton)
         self.horizontalLayout.addWidget(self.frame_4)
         self.frame_5 = QtWidgets.QFrame(self.frame_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
@@ -98,7 +106,7 @@ class Ui_MainWindow(object):
         self.label.setMinimumSize(QtCore.QSize(24, 0))
         self.label.setStyleSheet("")
         self.label.setObjectName("label")
-        self.horizontalLayout_4.addWidget(self.label, 0, QtCore.Qt.AlignRight)
+        self.horizontalLayout_4.addWidget(self.label)
         self.current_username_label = QtWidgets.QLabel(self.frame_5)
         self.current_username_label.setObjectName("current_username_label")
         self.horizontalLayout_4.addWidget(self.current_username_label)
@@ -245,18 +253,51 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_6.sizePolicy().hasHeightForWidth())
         self.frame_6.setSizePolicy(sizePolicy)
-        self.frame_6.setStyleSheet("border-bottom-left-radius:30px;\n"
-"background-color:rgb(255, 85, 127)\n"
+        self.frame_6.setStyleSheet("\n"
+"border-bottom-left-radius:30px;\n"
+"background-color: rgb(255, 255, 255);\n"
+" background: #3bafda;\n"
+"border: none;\n"
+"\n"
+"\n"
 "")
         self.frame_6.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_6.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_6.setObjectName("frame_6")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.frame_6)
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.frame_6)
+        self.horizontalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_10.setSpacing(0)
+        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
         self.listWidget = QtWidgets.QListWidget(self.frame_6)
         self.listWidget.setMaximumSize(QtCore.QSize(300, 16777215))
+        self.listWidget.setStyleSheet("QListWidget {\n"
+"    font: 14pt;\n"
+"    color: #FFFFFF;            /* 全部字体设为白色 */\n"
+"    border: 1px solid #ccd1d9;\n"
+"    outline: none;\n"
+"    border: none;\n"
+"    padding: 0;\n"
+"    background: #3bafda;       /* 列表背景色建议设置为深色，配合白字 */\n"
+"}\n"
+"QListWidget::item {\n"
+"    height: 45px;\n"
+"    padding-left: 5px;\n"
+"    font-size: 20px;\n"
+"    color: #FFFFFF;            /* 每一项字体颜色也设为白色 */\n"
+"    background: #3bafda;       /* 背景同主色，可选 */\n"
+"    border: none;              /* 去除下划线和边框 */\n"
+"}\n"
+"QListWidget::item:hover {\n"
+"    background-color: #2494be; /* 悬停变色，可自定义 */\n"
+"    border-radius: 8px;\n"
+"    color: #FFFFFF;\n"
+"}\n"
+"QListWidget::item:selected {\n"
+"    background-color: #1e7ea6; /* 选中项颜色，可自定义 */\n"
+"    color: #FFFFFF;\n"
+"}\n"
+"")
+        self.listWidget.setLineWidth(0)
         self.listWidget.setObjectName("listWidget")
         item = QtWidgets.QListWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
@@ -279,7 +320,7 @@ class Ui_MainWindow(object):
         item = QtWidgets.QListWidgetItem()
         item.setTextAlignment(QtCore.Qt.AlignCenter)
         self.listWidget.addItem(item)
-        self.verticalLayout_2.addWidget(self.listWidget)
+        self.horizontalLayout_10.addWidget(self.listWidget)
         self.horizontalLayout_8.addWidget(self.frame_6)
         self.frame_7 = QtWidgets.QFrame(self.frame_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Preferred)
@@ -311,6 +352,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.stackedWidget)
         self.horizontalLayout_8.addWidget(self.frame_7)
         self.verticalLayout.addWidget(self.frame_3)
+        self.verticalLayout_4.addWidget(self.frame)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -319,6 +361,21 @@ class Ui_MainWindow(object):
         self.max_button.clicked.connect(MainWindow.showFullScreen) # type: ignore
         self.min_button.clicked.connect(MainWindow.showNormal) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        icon_paths = [
+                "ui/res1/icons/home.png",
+                "ui/res1/icons/achievement.png",
+                "ui/res1/icons/event.png",
+                "ui/res1/icons/mood.png",
+                "ui/res1/icons/city.png",
+                "ui/res1/icons/feedback.png",
+                "ui/res1/icons/about.png"
+        ]
+        for i, path in enumerate(icon_paths):
+                item = self.listWidget.item(i)
+                icon = QtGui.QIcon(path)
+                item.setIcon(icon)
+                item.setTextAlignment(QtCore.Qt.AlignVCenter)
+        # 只垂直居中，水平左对齐
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

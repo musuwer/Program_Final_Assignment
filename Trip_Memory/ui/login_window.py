@@ -198,7 +198,6 @@ class Ui_Form(object):
         self.password_lineEdit.setFont(font)
         self.password_lineEdit.setStyleSheet("border:1px solid rgb(0,0,0);\n"
 "border-radius:8px;")
-        self.password_lineEdit.setText("")
         self.password_lineEdit.setEchoMode(QtWidgets.QLineEdit.Password)
         self.password_lineEdit.setObjectName("password_lineEdit")
         self.login_pushButton = QtWidgets.QPushButton(self.widget_2)
@@ -366,7 +365,9 @@ class Ui_Form(object):
         self.label.setText(_translate("Form", "    欢迎来到亿途  "))
         self.label_2.setText(_translate("Form", "  Welcome To\n"
 "Trip Memory !"))
+        self.username_lineEdit.setText(_translate("Form", "admin"))
         self.username_lineEdit.setPlaceholderText(_translate("Form", "账号："))
+        self.password_lineEdit.setText(_translate("Form", "admin"))
         self.password_lineEdit.setPlaceholderText(_translate("Form", "密码："))
         self.login_pushButton.setText(_translate("Form", "登录"))
         self.checkBox.setText(_translate("Form", "记住"))
