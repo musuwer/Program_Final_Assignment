@@ -6,132 +6,550 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>827</width>
-    <height>452</height>
+    <width>918</width>
+    <height>700</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>10</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0">
+   <property name="spacing">
+    <number>9</number>
+   </property>
    <property name="leftMargin">
-    <number>0</number>
+    <number>9</number>
    </property>
    <property name="topMargin">
-    <number>0</number>
+    <number>9</number>
    </property>
    <property name="rightMargin">
-    <number>0</number>
+    <number>9</number>
    </property>
    <property name="bottomMargin">
-    <number>0</number>
+    <number>9</number>
    </property>
-   <item row="0" column="0">
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QComboBox" name="comboBox">
-         <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;宋体&quot;;</string>
-         </property>
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#frame_2{
+	border-radius:30px;
+	background-color: rgb(0, 255, 127);
+	
+	background-color: rgb(170, 0, 255);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
          <item>
-          <property name="text">
-           <string>名称</string>
-          </property>
+          <widget class="QFrame" name="frame_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>1</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">
+#frame_4{
+	border-radius:30px;
+	background-color: rgb(255, 111, 101);
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <property name="spacing">
+             <number>15</number>
+            </property>
+            <property name="leftMargin">
+             <number>15</number>
+            </property>
+            <property name="topMargin">
+             <number>12</number>
+            </property>
+            <property name="rightMargin">
+             <number>15</number>
+            </property>
+            <property name="bottomMargin">
+             <number>12</number>
+            </property>
+            <item>
+             <widget class="QFrame" name="frame_6">
+              <property name="styleSheet">
+               <string notr="true">border-radius:30px;</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_16">
+               <property name="spacing">
+                <number>9</number>
+               </property>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QWidget" name="widget_2" native="true">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                       <horstretch>1</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>50</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">image: url(:/icons/res1/icons/option.png);
+border:none</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                       <horstretch>1</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>20</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>宋体</family>
+                       <pointsize>12</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">font: 12pt &quot;宋体&quot;;</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>用户ID</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>成就名称</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>成就类型</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>成就级别</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>颁奖机构</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>获得时间</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>描述说明</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QWidget" name="widget" native="true">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                       <horstretch>1</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">image: url(:/icons/res1/icons/research.png);</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="borrow_user_search_lineEdit">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                       <horstretch>9</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">font: 12pt &quot;宋体&quot;;</string>
+                     </property>
+                     <property name="placeholderText">
+                      <string>请搜索</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="search_borrow_user_pushButton">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">
+#search_borrow_user_pushButton:hover{
+	background-color: rgb(196, 196, 196);
+	border-radius:8px;
+	color: rgb(0, 0, 0);
+}
+
+#search_borrow_user_pushButton:pressed{
+	padding-top:3px;
+	padding-left:3px;
+}
+#search_borrow_user_pushButton{
+	
+	border-radius:30px;
+
+}</string>
+                     </property>
+                     <property name="text">
+                      <string>搜索</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>210</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_3">
+                   <item>
+                    <widget class="QPushButton" name="refresh_pushButton">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#refresh_pushButton:hover{
+	background-color: rgb(196, 196, 196);
+	border-radius:8px;
+	color: rgb(0, 0, 0);
+}
+#refresh_pushButton:pressed{
+	padding-top:3px;
+	padding-left:3px;
+}
+
+
+
+</string>
+                     </property>
+                     <property name="text">
+                      <string>刷新</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res1.qrc">
+                       <normaloff>:/icons/res1/icons/refresh.png</normaloff>:/icons/res1/icons/refresh.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="add_achieve_pushButton">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">#add_achieve_pushButton:hover{
+	background-color: rgb(196, 196, 196);
+	border-radius:8px;
+	color: rgb(0, 0, 0);
+}
+#add_achieve_pushButton:pressed{
+	padding-top:3px;
+	padding-left:3px;
+}
+
+
+
+</string>
+                     </property>
+                     <property name="text">
+                      <string>添加成就</string>
+                     </property>
+                     <property name="icon">
+                      <iconset resource="res1.qrc">
+                       <normaloff>:/icons/res1/icons/add.png</normaloff>:/icons/res1/icons/add.png</iconset>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </item>
          <item>
-          <property name="text">
-           <string>类型</string>
-          </property>
+          <widget class="QFrame" name="frame_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>5</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:30px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QTableWidget" name="tableWidget">
+              <property name="styleSheet">
+               <string notr="true">font: 12pt &quot;宋体&quot;;</string>
+              </property>
+              <column>
+               <property name="text">
+                <string>用户ID</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>成就名称</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>成就类型</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>成就级别</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>颁奖机构</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>获得时间</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string>描述说明</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+        <zorder>frame_4</zorder>
+        <zorder>widget</zorder>
+        <zorder>comboBox</zorder>
+        <zorder>widget_2</zorder>
+        <zorder>borrow_user_search_lineEdit</zorder>
+        <zorder>search_borrow_user_pushButton</zorder>
+        <zorder>refresh_pushButton</zorder>
+        <zorder>add_achieve_pushButton</zorder>
+        <zorder>frame_5</zorder>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_3">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+#frame_3{
+	border-radius:30px;
+
+background-color: rgb(0, 172, 83);
+	background-color: rgb(24, 255, 97);
+	background-color: rgb(49, 203, 93);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_20">
+         <item>
+          <widget class="QFrame" name="frame_7">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>3</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:30px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_18">
+            <item>
+             <widget class="QWidget" name="bar_widget" native="true">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(0, 0, 0);</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </item>
          <item>
-          <property name="text">
-           <string>地点</string>
-          </property>
+          <widget class="QFrame" name="frame_8">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>2</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:30px;</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_19">
+            <item>
+             <widget class="QWidget" name="bar_widget_2" native="true">
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(0, 0, 0);</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
          </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="borrow_user_search_lineEdit">
-         <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;宋体&quot;;</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="search_borrow_user_pushButton">
-         <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;宋体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>搜索</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="refresh_pushButton">
-         <property name="styleSheet">
-          <string notr="true">font: 12pt &quot;宋体&quot;;</string>
-         </property>
-         <property name="text">
-          <string>刷新</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QTableWidget" name="tableWidget">
-       <property name="styleSheet">
-        <string notr="true">font: 12pt &quot;宋体&quot;;</string>
-       </property>
-       <column>
-        <property name="text">
-         <string>成就名称</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>成就类型</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>成就地点</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>达成日期</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>成就级别</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>记录日期</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>最后修改日期</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>备注</string>
-        </property>
-       </column>
-      </widget>
-     </item>
-    </layout>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="res1.qrc"/>
+ </resources>
  <connections/>
 </ui>

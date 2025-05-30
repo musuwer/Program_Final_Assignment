@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from . import res1_rc
 
+
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
@@ -55,7 +56,7 @@ class Ui_Form(object):
         self.frame_12 = QtWidgets.QFrame(self.frame_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(2)
+        sizePolicy.setVerticalStretch(3)
         sizePolicy.setHeightForWidth(self.frame_12.sizePolicy().hasHeightForWidth())
         self.frame_12.setSizePolicy(sizePolicy)
         self.frame_12.setStyleSheet("background-color: rgb(255, 255, 255);\n"
@@ -82,13 +83,22 @@ class Ui_Form(object):
         self.frame_11 = QtWidgets.QFrame(self.frame_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(1)
+        sizePolicy.setVerticalStretch(2)
         sizePolicy.setHeightForWidth(self.frame_11.sizePolicy().hasHeightForWidth())
         self.frame_11.setSizePolicy(sizePolicy)
-        self.frame_11.setStyleSheet("border-radius:30px")
+        self.frame_11.setStyleSheet("background-color: rgb(0, 170, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius:30px\n"
+"")
         self.frame_11.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_11.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_11.setObjectName("frame_11")
+        self.horizontalLayout_10 = QtWidgets.QHBoxLayout(self.frame_11)
+        self.horizontalLayout_10.setObjectName("horizontalLayout_10")
+        self.boat_widget = QtWidgets.QWidget(self.frame_11)
+        self.boat_widget.setStyleSheet("")
+        self.boat_widget.setObjectName("boat_widget")
+        self.horizontalLayout_10.addWidget(self.boat_widget)
         self.verticalLayout_11.addWidget(self.frame_11)
         self.horizontalLayout.addWidget(self.frame_2)
         self.frame_3 = QtWidgets.QFrame(self.frame)
@@ -436,4 +446,3 @@ class Ui_Form(object):
         item.setText(_translate("Form", "开始时间"))
         item = self.book_recommend_tableWidget.horizontalHeaderItem(4)
         item.setText(_translate("Form", "截止时间"))
-

@@ -21,7 +21,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName("verticalLayout_4")
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setStyleSheet("#frame{\n"
-"    border-top-left-radius:30px;\n"
+"    border-radius:30px;\n"
+"    \n"
+"    background-color: rgb(255, 255, 255);\n"
 "}\n"
 "")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -361,6 +363,7 @@ class Ui_MainWindow(object):
         self.max_button.clicked.connect(MainWindow.showFullScreen) # type: ignore
         self.min_button.clicked.connect(MainWindow.showNormal) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
         icon_paths = [
                 "ui/res1/icons/home.png",
                 "ui/res1/icons/achievement.png",
@@ -401,3 +404,4 @@ class Ui_MainWindow(object):
         item = self.listWidget.item(6)
         item.setText(_translate("MainWindow", "关于"))
         self.listWidget.setSortingEnabled(__sortingEnabled)
+

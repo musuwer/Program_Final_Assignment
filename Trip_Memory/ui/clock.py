@@ -25,10 +25,10 @@ class AnalogClock(QWidget):
         font = QFont("Arial", 22, QFont.Bold)
         painter.setFont(font)
         positions = {
-            '12': (0, -85),
-            '3': (85, 0),
-            '6': (0, 95),
-            '9': (-88, 0)
+            '12': (0, -70),
+            '3': (80, 0),
+            '6': (0, 70),
+            '9': (-75, 0)
         }
         for num, (x, y) in positions.items():
             painter.drawText(QRectF(x-20, y-20, 40, 40), Qt.AlignCenter, num)

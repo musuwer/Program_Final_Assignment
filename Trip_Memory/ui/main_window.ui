@@ -19,7 +19,9 @@
      <widget class="QFrame" name="frame">
       <property name="styleSheet">
        <string notr="true">#frame{
-	border-top-left-radius:30px;
+	border-radius:30px;
+	
+	background-color: rgb(255, 255, 255);
 }
 </string>
       </property>

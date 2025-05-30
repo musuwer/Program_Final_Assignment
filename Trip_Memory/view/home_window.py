@@ -57,6 +57,7 @@ class HomeWindow(Ui_Form, QWidget):
             self.add_annou_pushButton.setVisible(False)
             self.add_goal_pushButton.setVisible(True)
 
+        # 时钟插件
         from ui.clock import AnalogClock
         from PyQt5.QtWidgets import QVBoxLayout
 
@@ -65,6 +66,16 @@ class HomeWindow(Ui_Form, QWidget):
         layout = QVBoxLayout(self.clock_widget)
         layout.setContentsMargins(0, 0, 0, 0)
         layout.addWidget(self.analog_clock)
+
+        # 小船插件
+        from ui.boat import SailingBoatWidget
+
+        self.boat = SailingBoatWidget(self.boat_widget)
+        layout = QVBoxLayout(self.boat_widget)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.addWidget(self.boat)
+
+
 
     def init_ui(self):
         """初始化表格等UI属性"""

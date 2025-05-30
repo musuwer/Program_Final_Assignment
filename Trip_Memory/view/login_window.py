@@ -132,6 +132,7 @@ class LoginWindow(Ui_Form, QWidget):
         """
 
         #修改为SQlite语句！！！
+        # 需要修改的地方
         db = DBHelp()  # 创建数据库操作对象
         count, res = db.query_super('user', 'username', username)  # 查询该用户名用户记录
         # 返回的 res 是一个二维数组/列表，只有一行
@@ -175,6 +176,7 @@ class LoginWindow(Ui_Form, QWidget):
             self.main_window.show()  # 显示主窗口
             self.close()  # 关闭登录窗口
 
+    # 可以加在搜索那部分
     def keyPressEvent(self, QKeyEvent):
         """
         监听键盘触发事件,通过判断是否按下的按键为Enter或者Return键
